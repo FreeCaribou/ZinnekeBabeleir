@@ -1,0 +1,83 @@
+/* 
+primary: #002776
+secondary: #FECB00
+ */
+
+:root {
+  --color-primary: #002776;
+  --color-secondary: #FECB00;
+
+  --color-for: #279220;
+  --color-against: #EF0F10;
+  --color-abstention: #ACACAC;
+  --color-absent: #101010;
+
+  --small-pixel: 15px;
+  --medium-pixel: 25px;
+  --large-pixel: 50px;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-for {
+  color: var(--color-for);
+}
+
+.color-against {
+  color: var(--color-against);
+}
+
+.color-abstention {
+  color: var(--color-abstention);
+}
+
+.color-absent {
+  color: var(--color-absent);
+}
+
+html {
+  /* To have all the bottom footer in blue when the page is too short */
+  background-color: var(--color-primary);
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+nav {
+  margin-bottom: var(--medium-pixel);
+}
+
+.navbar {
+  background-color: var(--color-primary);
+}
+
+.navbar a {
+  color: var(--color-secondary) !important;
+}
+
+button.navbar-toggler {
+  border-color: var(--color-secondary) !important;
+}
+
+footer {
+  margin-top: var(--medium-pixel);
+  padding: var(--small-pixel);
+  background-color: var(--color-primary);
+  color: var(--color-secondary) !important;
+}
+
+#button-change-language {
+  visibility: hidden;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}

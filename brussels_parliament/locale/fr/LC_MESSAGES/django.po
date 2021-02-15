@@ -1,0 +1,31 @@
+# fr
+#, fuzzy
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TheDeputies"
+msgstr "Les députés"
+
+msgid "VotesPropositions"
+msgstr "Les propositions avec votes"
+
+msgid "For"
+msgstr "Pour"
+
+msgid "Against"
+msgstr "Contre"
+
+msgid "Abstention"
+msgstr "Abstention"
+
+msgid "Absent"
+msgstr "Absent"
+
+msgid "Propositions"
+msgstr "Propositions"
+
+msgid "Deputies"
+msgstr "Deputés"

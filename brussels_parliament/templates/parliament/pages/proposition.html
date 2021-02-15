@@ -1,0 +1,66 @@
+{% extends 'parliament/base.html' %}
+
+{% block content %}
+
+{% load i18n %}
+
+<div class="row">
+  <h1>{{proposition.pk}}: {{proposition.title}}</h1>
+</div>
+<div class="row">
+  <h2>{{proposition.date | date:"Y/m/d"}}</h2>
+</div>
+<!-- <div class="row">
+  total:{{proposition.vote_count}} {% trans "For" %}:{{proposition.vote_for}} {% trans "Against"%}:
+  {{proposition.vote_against}}
+  {% trans "Abstention" %}:{{proposition.vote_abstention}}
+  {% trans "Absent" %}:{{proposition.vote_absent}}
+</div> -->
+<div class="row">
+  TODO need to know, a law pass if majority of all deputies of all deputies present / see the summary of the count vote?
+</div>
+<div class="row">
+  <canvas id="myChart"></canvas>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    {% trans "For" %}:
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_for title=False %}
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    {% trans "Against" %}:
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_against title=False %}
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    {% trans "Abstention" %}:
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_abstention title=False %}
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    {% trans "Absent" %}:
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_absent title=False %}
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      datasets: [
+        {
+          data: ["{{proposition.vote_for}}", "{{proposition.vote_against}}", "{{proposition.vote_abstention}}", "{{proposition.vote_absent}}"],
+          backgroundColor: [
+            '#279220',
+            '#EF0F10',
+            '#ACACAC',
+            '#101010'
+          ]
+        }
+      ],
+      labels: ['{% trans "For" %}', '{% trans "Against"%}', '{% trans "Abstention" %}', '{% trans "Absent" %}']
+    }
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'parliament/base.html' %}
+
+{% block content %}
+
+{% load i18n %}
+
+<h1>{% trans "Propositions" %}:</h1>
+{% include 'parliament/components/propositions_list.html' %}
+
+{% endblock %}

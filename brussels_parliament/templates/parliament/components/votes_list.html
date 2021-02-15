@@ -1,0 +1,12 @@
+{% if votes|length_is:"0" %}
+<p>No vote</p>
+{% else %}
+<h1>Votes:</h1>
+<ul class="list-group">
+  {% for v in votes %}
+  <li class="list-group-item">
+    {{v.type_code}} {{v.proposition.title}} / {{v.deputy.first_name}} {{v.deputy.last_name}}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

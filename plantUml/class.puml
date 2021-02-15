@@ -1,0 +1,35 @@
+@startuml class
+
+' many type of proposition, no?
+object Proposition {
+  title: varchar
+  date: date
+}
+
+object Deputy {
+  firstname: varchar
+  lastname: varchar
+}
+
+object Party {
+  name: varchar
+}
+
+object Legislature {
+  beginDate: date 
+  endDate: date
+}
+
+' one code or varchar is good to understand (for|against|abstention|absent)
+object Vote {
+  typeCode: varchar
+}
+
+Deputy "0..*" -- "1" Party
+Deputy "0..*" -- "1..*" Legislature
+Deputy "1" -- "0..*" Vote
+Vote "0..*" -- "1" Proposition
+Proposition "0..*" -- "1" Legislature
+
+
+@enduml

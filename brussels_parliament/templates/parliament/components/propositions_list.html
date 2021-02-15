@@ -1,0 +1,32 @@
+{% load i18n %}
+
+{% if propositions|length_is:"0" %}
+<p>No proposition</p>
+{% else %}
+<ul class="list-group">
+  {% for p in propositions %}
+  <li class="list-group-item flex-space-between">
+    <a href="{% url 'home:proposition_detail_page' pk=p.pk %}">
+      {{p.date | date:"Y F j"}} | {{p.title}}
+    </a>
+    {% if p.vote_type_code %}
+    <span>
+      {% if p.vote_type_code == 'for' %}
+
+      <i class="fas fa-check-circle color-for" title="{% trans 'For' %}" alt="{% trans 'For' %}"></i>
+      {% elif p.vote_type_code == 'against' %}
+      <i class="fas fa-times-circle color-against" title="{% trans 'Against' %}" alt="{% trans 'Against' %}"></i>
+      {% elif p.vote_type_code == 'abstention' %}
+      <i class="fas fa-minus-circle color-abstention" title="{% trans 'Abstention' %}"
+        alt="{% trans 'Abstention' %}"></i>
+      {% elif p.vote_type_code == 'absent' %}
+      <i class="fas fa-circle color-absent" title="{% trans 'Absent' %}" alt="{% trans 'Absent' %}"></i>
+      {% else %}
+      <i class="fas fa-question-circle color-primary" title="unknow" alt="unknow"></i>
+      {% endif %}
+    </span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

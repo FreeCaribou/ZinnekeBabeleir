@@ -1,0 +1,1 @@
+web: gunicorn zinneke_babeleir_project.wsgi

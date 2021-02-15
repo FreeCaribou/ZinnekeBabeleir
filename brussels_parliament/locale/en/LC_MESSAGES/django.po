@@ -1,0 +1,25 @@
+# en
+
+msgid "TheDeputies"
+msgstr "The MPs"
+
+msgid "VotesPropositions"
+msgstr "Proposals with votes"
+
+msgid "For"
+msgstr "For"
+
+msgid "Against"
+msgstr "Against"
+
+msgid "Abstention"
+msgstr "Abstention"
+
+msgid "Absent"
+msgstr "Absent"
+
+msgid "Propositions"
+msgstr "Propositions"
+
+msgid "Deputies"
+msgstr "Deputies"

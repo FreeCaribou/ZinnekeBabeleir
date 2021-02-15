@@ -1,0 +1,25 @@
+# nl
+
+msgid "TheDeputies"
+msgstr "De volksvertegenwoordigers"
+
+msgid "VotesPropositions"
+msgstr "Voorstellen met stemmen"
+
+msgid "For"
+msgstr "Voor"
+
+msgid "Against"
+msgstr "Tegen"
+
+msgid "Abstention"
+msgstr "Onthouding"
+
+msgid "Absent"
+msgstr "Afwezig"
+
+msgid "Propositions"
+msgstr "Voorstellen"
+
+msgid "Deputies"
+msgstr "Volksvertegenwoordigers"
