@@ -1,6 +1,5 @@
 import os
 from django.db import models
-from mysql.connector import connection
 
 # Maybe TODO / To See
 
