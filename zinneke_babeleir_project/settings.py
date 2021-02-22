@@ -36,7 +36,8 @@ ALLOWED_HOSTS = [
     'localhost',
     'python-django-testouille.herokuapp.com',
     'hello.gerardweb.eu',
-    'zinneke-babeleir.be'
+    'zinneke-babeleir.be',
+    'www.zinneke-babeleir.be'
 ]
 
 
