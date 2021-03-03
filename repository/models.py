@@ -7,10 +7,19 @@ from django.db import models
 class Party(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Parties"
+
 
 class Legislature(models.Model):
     begin_date = models.DateField()
     end_date = models.DateField(null=True)
+
+    def __str__(self):
+        return "{0} - {1}".format(self.begin_date.strftime("%Y/%m"), self.end_date.strftime("%Y/%m"))
 
 
 class Deputy(models.Model):
@@ -18,6 +27,9 @@ class Deputy(models.Model):
     last_name = models.CharField(max_length=100)
     party = models.ForeignKey(Party, on_delete=models.CASCADE)
     legislatures = models.ManyToManyField(Legislature, related_name='deputies')
+
+    class Meta:
+        verbose_name_plural = "Deputies"
 
 
 # Have proposition of vote different type?
