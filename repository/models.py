@@ -28,6 +28,9 @@ class Deputy(models.Model):
     party = models.ForeignKey(Party, on_delete=models.CASCADE)
     legislatures = models.ManyToManyField(Legislature, related_name='deputies')
 
+    def __str__(self):
+        return '{} {} / {}'.format(self.first_name, self.last_name, self.party.name)
+
     class Meta:
         verbose_name_plural = "Deputies"
 
@@ -37,6 +40,9 @@ class Proposition(models.Model):
     title = models.CharField(max_length=255)
     date = models.DateField()
     legislature = models.ForeignKey(Legislature, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return '{} / {}'.format(self.title, self.legislature)
 
 
 class Vote(models.Model):
@@ -114,9 +120,6 @@ if os.environ.get('ENV') != 'PRODUCTION':
                           date="2021-02-28", legislature=l1)
     propTwo.save()
 
-    vote = Vote(type_code="for", deputy=plDOne, proposition=propOne)
-    vote.save()
-
     vote = Vote(type_code="for", deputy=plDTwo, proposition=propOne)
     vote.save()
 
@@ -136,3 +139,29 @@ if os.environ.get('ENV') != 'PRODUCTION':
     vote.save()
 
     print('DB init finish')
+
+# Potentiel trigger
+# TODO see how to init that with django, with query?
+
+# BEGIN
+# DECLARE bDone INT;
+# DECLARE varId INT;
+# DECLARE curs CURSOR FOR SELECT d.id FROM `repository_deputy` AS d, repository_deputy_legislatures AS dl WHERE d.id = dl.deputy_id AND dl.legislature_id = NEW.legislature_id;
+# DECLARE CONTINUE HANDLER FOR NOT FOUND SET bDone = 1;
+
+#  OPEN curs;
+#   SET bDone = 0;
+#   loop_c: LOOP
+#     FETCH curs INTO varId;
+
+#     IF bDone THEN
+#     	LEAVE loop_c;
+#     END IF;
+
+# 	INSERT INTO `repository_vote` ( `type_code`, `deputy_id`, `proposition_id`)  VALUES ('wait', varId, NEW.id);
+
+#   END LOOP;
+
+#   CLOSE curs;
+
+# END
