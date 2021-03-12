@@ -1,5 +1,3 @@
-
-
 def init_db():
     from django.db import connection
     print('ready to init DB?')
@@ -26,15 +24,15 @@ def init_db():
     )
 
     cursor.execute(
-        "INSERT INTO {} (begin_date, end_date) VALUES('2015-01-01', '2019-01-01'), ('2019-01-01', '2014-01-01')"
+        "INSERT INTO {} (begin_date, end_date) VALUES('2015-01-01', '2019-01-01'), ('2019-01-01', '2024-01-01')"
         .format(repo_legislature)
     )
 
     cursor.execute(
         "INSERT INTO {} (first_name, last_name, party_id)".format(repo_deputy) +
         "VALUES('Raoul', 'Estassis', 1)" +
-        ",('Sophie', 'Boonen', 1)" +
         ",('Norman', 'Michel', 2)" +
+        ",('Sophie', 'Boonen', 1)" +
         ",('Briton', 'Michel', 2)" +
         ",('Olivier', 'Piedperdu', 3)" +
         ",('Joëlle', 'Ei', 3)"

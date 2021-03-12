@@ -16,4 +16,4 @@ def get_all_voted_type_proposition(proposition_pk, vote_type_code):
 
 
 def get_all_by_legislature(legislature_id):
-    return Deputy.objects.all().filter(legislatures__pk=legislature_id)
+    return Deputy.objects.all().filter(legislatures__pk=legislature_id).order_by('party__name', 'last_name', 'first_name')

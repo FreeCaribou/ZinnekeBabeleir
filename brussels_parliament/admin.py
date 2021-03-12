@@ -18,6 +18,11 @@ class DeputyInLine(admin.TabularInline):
     extra = 1
 
 
+class DeputyForLegislatureInLine(admin.TabularInline):
+    model = Legislature.deputies.through
+    extra = 1
+
+
 @admin.register(Vote)
 class VoteAdmin(admin.ModelAdmin):
     list_display = ['proposition', 'deputy', 'type_code']
@@ -56,4 +61,4 @@ class PartyAdmin(admin.ModelAdmin):
 
 @admin.register(Legislature)
 class LegislatureAdmin(admin.ModelAdmin):
-    inlines = [PropositionInline]
+    inlines = [DeputyForLegislatureInLine, PropositionInline]

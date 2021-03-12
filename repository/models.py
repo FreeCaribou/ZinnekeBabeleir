@@ -42,11 +42,9 @@ class Proposition(models.Model):
     legislature = models.ForeignKey(Legislature, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
-        print('hello save proposition')
         super().save(*args, **kwargs)
         from .repos.vote_repo import init_proposition_votes
         init_proposition_votes(self)
-        print(self.id)
 
     def __str__(self):
         return '{} / {}'.format(self.title, self.legislature)
