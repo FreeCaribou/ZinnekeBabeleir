@@ -37,7 +37,10 @@ class Deputy(models.Model):
 
 # Have proposition of vote different type?
 class Proposition(models.Model):
-    title = models.CharField(max_length=255)
+    title_fr = models.CharField(max_length=255)
+    title_nl = models.CharField(
+        max_length=255, default=None, blank=True, null=True)
+    detail = models.TextField(default=None, blank=True, null=True)
     date = models.DateField()
     legislature = models.ForeignKey(Legislature, on_delete=models.CASCADE)
 
@@ -47,7 +50,7 @@ class Proposition(models.Model):
         init_proposition_votes(self)
 
     def __str__(self):
-        return '{} / {}'.format(self.title, self.legislature)
+        return '{} / {} --- {}'.format(self.title_fr, self.title_nl, self.legislature)
 
 
 class Vote(models.Model):

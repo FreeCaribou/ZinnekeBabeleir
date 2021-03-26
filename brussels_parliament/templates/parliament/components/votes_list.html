@@ -5,7 +5,8 @@
 <ul class="list-group">
   {% for v in votes %}
   <li class="list-group-item">
-    {{v.type_code}} {{v.proposition.title}} / {{v.deputy.first_name}} {{v.deputy.last_name}}
+    {{v.type_code}} {{v.proposition.title_fr}} / {{v.proposition.title_nl}} - {{v.deputy.first_name}}
+    {{v.deputy.last_name}}
   </li>
   {% endfor %}
 </ul>

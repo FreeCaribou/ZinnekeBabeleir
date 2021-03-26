@@ -51,16 +51,16 @@ def init_db():
     )
 
     cursor.execute(
-        "INSERT INTO {} (title, date, legislature_id)".format(repo_proposition) +
-        "VALUES('Plus de frite à la cantine', '2021-02-09', 2)" +
-        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', '2021-02-16', 2)"
+        "INSERT INTO {} (title_fr, title_nl, date, legislature_id)".format(repo_proposition) +
+        "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-09', 2)" +
+        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 2)"
     )
 
     cursor.execute(
         "INSERT INTO {} (type_code, deputy_id, proposition_id)".format(repo_vote) +
         "VALUES('for', 1, 1)" +
-        ",('for', 2, 1)" +
-        ",('against', 3, 1)" +
+        ",('against', 2, 1)" +
+        ",('for', 3, 1)" +
         ",('against', 4, 1)" +
         ",('abstention', 5, 1)" +
         ",('absent', 6, 1)"

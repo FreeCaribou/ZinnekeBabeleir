@@ -40,7 +40,7 @@ class VoteInline(admin.TabularInline):
 
 @admin.register(Proposition)
 class PropositionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'date', 'legislature']
+    list_display = ['title_fr', 'title_nl', 'date', 'legislature']
     inlines = [VoteInline]
 
 
@@ -48,7 +48,7 @@ class PropositionInline(admin.TabularInline):
     model = Proposition
     fieldsets = (
         (None, {
-            'fields': ['title', 'date', 'legislature'],
+            'fields': ['title_fr', 'title_nl', 'date', 'legislature'],
         }),
     )
     extra = 1

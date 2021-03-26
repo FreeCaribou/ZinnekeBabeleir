@@ -12,7 +12,7 @@ def get_one(pk):
 
 # The list of deputies who have voted type for a propositon
 def get_all_voted_type_proposition(proposition_pk, vote_type_code):
-    return Deputy.objects.all().filter(vote__proposition__pk=proposition_pk, vote__type_code=vote_type_code)
+    return Deputy.objects.all().filter(vote__proposition__pk=proposition_pk, vote__type_code=vote_type_code).order_by('party__name')
 
 
 def get_all_by_legislature(legislature_id):
