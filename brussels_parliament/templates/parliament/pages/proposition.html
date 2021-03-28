@@ -5,10 +5,10 @@
 {% load i18n %}
 
 <div class="row">
-  <h1>{{proposition.pk}}: {{proposition.title_fr}} / {{proposition.title_nl}}</h1>
+  <h1>{{proposition.title_fr}} / {{proposition.title_nl}}</h1>
 </div>
 <div class="row">
-  <h2>{{proposition.date | date:"Y/m/d"}}</h2>
+  <h2>{{proposition.date | date:"Y/m/d"}} {{proposition.legislature.parliament}} </h2>
 </div>
 <!-- <div class="row">
   total:{{proposition.vote_count}} {% trans "For" %}:{{proposition.vote_for}} {% trans "Against"%}:

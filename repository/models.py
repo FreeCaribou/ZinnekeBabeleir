@@ -17,9 +17,30 @@ class Party(models.Model):
 class Legislature(models.Model):
     begin_date = models.DateField()
     end_date = models.DateField(null=True)
+    FEDERAL = 'FED'
+    BRUSSELS = 'BRU'
+    VLAAMS = 'VLA'
+    WALLONIA = 'WAL'
+    FRANCOPHONE = 'FRA'
+    GERMANOPHONE = 'GER'
+    OTHER = 'other'
+    PARLIAMENT_CHOICES = [
+        (FEDERAL, 'federal'),
+        (BRUSSELS, 'brussels'),
+        (VLAAMS, 'vlaams'),
+        (WALLONIA, 'wallonia'),
+        (FRANCOPHONE, 'francophone'),
+        (GERMANOPHONE, 'germanophone'),
+        (OTHER, 'other')
+    ]
+    parliament = models.CharField(
+        max_length=10,
+        choices=PARLIAMENT_CHOICES,
+        default=OTHER
+    )
 
     def __str__(self):
-        return "{0} - {1}".format(self.begin_date.strftime("%Y/%m"), self.end_date.strftime("%Y/%m"))
+        return "{} / {} - {}".format(self.parliament, self.begin_date.strftime("%Y/%m"), self.end_date.strftime("%Y/%m"))
 
 
 class Deputy(models.Model):

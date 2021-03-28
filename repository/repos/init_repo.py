@@ -24,7 +24,7 @@ def init_db():
     )
 
     cursor.execute(
-        "INSERT INTO {} (begin_date, end_date) VALUES('2015-01-01', '2019-01-01'), ('2019-01-01', '2024-01-01')"
+        "INSERT INTO {} (begin_date, end_date, parliament) VALUES('2015-01-01', '2019-01-01', 'FED'), ('2019-01-01', '2024-01-01', 'FED')"
         .format(repo_legislature)
     )
 
