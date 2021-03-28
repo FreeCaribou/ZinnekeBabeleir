@@ -54,9 +54,23 @@ class Proposition(models.Model):
 
 
 class Vote(models.Model):
-    # TBD for | against | abstention | absent
-    # Made other table for that?
-    type_code = models.CharField(max_length=10)
+    FOR = 'for'
+    AGAINST = 'against'
+    ABSTENTION = 'abstention'
+    ABSENT = 'absent'
+    WAIT = 'wait'
+    CODE_CHOICES = [
+        (FOR, 'for'),
+        (AGAINST, 'against'),
+        (ABSTENTION, 'abstention'),
+        (ABSENT, 'absent'),
+        (WAIT, 'wait')
+    ]
+    type_code = models.CharField(
+        max_length=10,
+        choices=CODE_CHOICES,
+        default=WAIT
+    )
     deputy = models.ForeignKey(Deputy, on_delete=models.CASCADE)
     proposition = models.ForeignKey(Proposition, on_delete=models.CASCADE)
 

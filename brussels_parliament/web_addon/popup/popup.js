@@ -1,10 +1,10 @@
 browser.tabs.executeScript(null, { file: "../script/fill-in-vote.js" });
 
 const data_mock = {
-  for: ['Ridouane Chahid', 'John Pitseys'],
-  against: ['Alexia Bertrand'],
-  abstention: ['Emmanuel De Bock', 'Françoise De Smedt', 'Céline Frémault'],
-  absent: ['Victoria Austraet']
+  for: ['Raoul Estassis', 'Norman Michel'],
+  against: ['Sophie Boonen'],
+  abstention: ['Briton Michel'],
+  absent: ['Olivier Piedperdu', 'Joëlle Ei']
 }
 
 document.getElementById("launch-fillin-vote").addEventListener("click", (e) => {
