@@ -20,6 +20,7 @@ class DeputyInLine(admin.TabularInline):
 
 class DeputyForLegislatureInLine(admin.TabularInline):
     model = Legislature.deputies.through
+    readonly_fields = ['deputy']
     extra = 1
 
 
@@ -35,6 +36,7 @@ class VoteInline(admin.TabularInline):
             'fields': ['deputy', 'type_code'],
         }),
     )
+    readonly_fields = ['deputy']
     extra = 1
 
 

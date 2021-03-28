@@ -100,4 +100,4 @@ class Vote(models.Model):
 # For no production mode, rebuild the db to always have a 'clean' db
 if os.environ.get('ENV') != 'PRODUCTION':
     from .repos.init_repo import init_db
-    init_db()
+    # init_db()
