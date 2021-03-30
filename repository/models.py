@@ -65,10 +65,14 @@ class Proposition(models.Model):
     date = models.DateField()
     legislature = models.ForeignKey(Legislature, on_delete=models.CASCADE)
 
+    # if it's a new proposition, we must init the deputy vote
+    # but not if it's an update!
     def save(self, *args, **kwargs):
+        verify_id = self.id
         super().save(*args, **kwargs)
-        from .repos.vote_repo import init_proposition_votes
-        init_proposition_votes(self)
+        if verify_id is None:
+            from .repos.vote_repo import init_proposition_votes
+            init_proposition_votes(self)
 
     def __str__(self):
         return '{} / {} --- {}'.format(self.title_fr, self.title_nl, self.legislature)
