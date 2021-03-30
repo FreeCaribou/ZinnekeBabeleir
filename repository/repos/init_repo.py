@@ -24,7 +24,7 @@ def init_db():
     )
 
     cursor.execute(
-        "INSERT INTO {} (begin_date, end_date, parliament) VALUES('2015-01-01', '2019-01-01', 'FED'), ('2019-01-01', '2024-01-01', 'FED')"
+        "INSERT INTO {} (begin_date, end_date, parliament) VALUES('2015-01-01', '2019-01-01', 'BRU'), ('2019-01-01', '2024-01-01', 'FED')"
         .format(repo_legislature)
     )
 
@@ -53,12 +53,13 @@ def init_db():
     cursor.execute(
         "INSERT INTO {} (title_fr, title_nl, date, legislature_id)".format(repo_proposition) +
         "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-09', 2)" +
-        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 2)"
+        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 1)"
     )
 
     cursor.execute(
         "INSERT INTO {} (type_code, deputy_id, proposition_id)".format(repo_vote) +
         "VALUES('for', 1, 1)" +
+        ",('for', 1, 2)" +
         ",('against', 2, 1)" +
         ",('for', 3, 1)" +
         ",('against', 4, 1)" +
