@@ -5,6 +5,7 @@ class LegislatureSimpleSerializer(serializers.Serializer):
     pk = serializers.IntegerField()
     begin_date = serializers.DateField()
     end_date = serializers.DateField()
+    parliament = serializers.CharField(max_length=10)
 
 
 class LegislatureSerializer(LegislatureSimpleSerializer):

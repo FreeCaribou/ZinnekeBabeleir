@@ -3,7 +3,9 @@ from rest_framework import serializers
 
 class PropositionSimpleSerializer(serializers.Serializer):
     pk = serializers.IntegerField()
-    title = serializers.CharField(max_length=255)
+    title_fr = serializers.CharField(max_length=255)
+    title_nl = serializers.CharField(max_length=255)
+    detail = serializers.CharField(required=False)
     date = serializers.DateField()
     vote_count = serializers.IntegerField(required=False)
     vote_for = serializers.IntegerField(required=False)
