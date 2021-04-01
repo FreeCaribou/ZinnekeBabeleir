@@ -2,8 +2,10 @@
 
 ' many type of proposition, no?
 object Proposition {
-  title: varchar
+  title_fr: varchar
+  title_nl: varchar
   date: date
+  detail: text
 }
 
 object Deputy {
@@ -18,6 +20,7 @@ object Party {
 object Legislature {
   beginDate: date 
   endDate: date
+  parliament: varchar
 }
 
 ' one code or varchar is good to understand (for|against|abstention|absent)
