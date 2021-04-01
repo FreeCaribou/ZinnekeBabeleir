@@ -1,7 +1,7 @@
 from django.urls import path
-from brussels_parliament.views import Home
-from brussels_parliament.views import Deputy
-from brussels_parliament.views import Proposition
+from parliament.views import Home
+from parliament.views import Deputy
+from parliament.views import Proposition
 
 app_name = 'home'
 urlpatterns = [

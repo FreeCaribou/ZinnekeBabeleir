@@ -19,7 +19,7 @@ from django.conf.urls.i18n import i18n_patterns
 import os
 
 urlpatterns = i18n_patterns(
-    path('', include('brussels_parliament.urls', namespace='home')),
+    path('', include('parliament.urls', namespace='home')),
     path('api/', include('api.urls', namespace='api')),
     path(os.environ.get('ADMIN_URL', 'admin/'), admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),

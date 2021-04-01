@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'repository.apps.RepositoryConfig',
     'api.apps.ApiConfig',
-    'brussels_parliament.apps.BrusselsParliamentConfig',
+    'parliament.apps.ParliamentConfig',
     'rest_framework'
 ]
 
@@ -148,7 +148,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATIC_ROOT = "./var/www/brussels_parliament/static/"
+# STATIC_ROOT = "./var/www/parliament/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
