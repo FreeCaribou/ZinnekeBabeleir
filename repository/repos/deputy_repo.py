@@ -1,5 +1,6 @@
 from ..models import Deputy
 from django.shortcuts import get_object_or_404
+from repository.repos.legislature_repo import get_one_last_by_parliament
 
 
 def get_all():
@@ -8,6 +9,11 @@ def get_all():
 
 def get_one(pk):
     return get_object_or_404(Deputy, pk=pk)
+
+
+def get_all_by_last_legislature_parliament(parliament):
+    legislature = get_one_last_by_parliament(parliament)
+    return Deputy.objects.all().filter(legislatures=legislature).order_by('party__name')
 
 
 # The list of deputies who have voted type for a propositon

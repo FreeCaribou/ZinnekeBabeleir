@@ -28,4 +28,25 @@ msgid "Propositions"
 msgstr "Propositions"
 
 msgid "Deputies"
-msgstr "Deputés"
+msgstr "Nos deputés"
+
+msgid "FedDeputies"
+msgstr "Deputés fédéral"
+
+msgid "BruDeputies"
+msgstr "Deputés bruxellois"
+
+msgid "VlaDeputies"
+msgstr "Deputés flamands"
+
+msgid "WalDeputies"
+msgstr "Deputés wallon"
+
+msgid "FraDeputies"
+msgstr "Deputés francophone"
+
+msgid "GerDeputies"
+msgstr "Deputés germanophone"
+
+msgid "SenDeputies"
+msgstr "Sénateurs"

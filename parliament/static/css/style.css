@@ -81,3 +81,11 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+.margin-bottom-small {
+  margin-bottom: var(--small-pixel);
+}
+
+.margin-bottom-medium {
+  margin-bottom: var(--medium-pixel);
+}

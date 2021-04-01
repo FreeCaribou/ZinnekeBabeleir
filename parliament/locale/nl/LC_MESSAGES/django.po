@@ -22,4 +22,25 @@ msgid "Propositions"
 msgstr "Voorstellen"
 
 msgid "Deputies"
-msgstr "Volksvertegenwoordigers"
+msgstr "Onze volksvertegenwoordigers"
+
+msgid "FedDeputies"
+msgstr "Volksvertegenwoordigers federaal"
+
+msgid "BruDeputies"
+msgstr "Volksvertegenwoordigers Brussel"
+
+msgid "VlaDeputies"
+msgstr "Volksvertegenwoordigers Vlaams"
+
+msgid "WalDeputies"
+msgstr "Volksvertegenwoordigers Walen"
+
+msgid "FraDeputies"
+msgstr "Volksvertegenwoordigers Franstalig"
+
+msgid "GerDeputies"
+msgstr "Volksvertegenwoordigers Duitstalig"
+
+msgid "SenDeputies"
+msgstr "Senatoren"

@@ -4,7 +4,63 @@
 
 {% load i18n %}
 
-<h1>{% trans "Deputies" %}:</h1>
-{% include 'parliament/components/deputies_list.html' with title=True %}
+<h1>{% trans "Deputies" %}</h1>
+<ul class="nav justify-content-center margin-bottom-medium">
+  <li class="nav-item">
+    <a href="#anchor-fed" class="nav-link">{% trans "FedDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-bru" class="nav-link">{% trans "BruDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-vla" class="nav-link">{% trans "VlaDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-wal" class="nav-link">{% trans "WalDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-fra" class="nav-link">{% trans "FraDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-ger" class="nav-link">{% trans "GerDeputies" %}</a>
+  </li>
+  <li class="nav-item">
+    <a href="#anchor-sen" class="nav-link">{% trans "SenDeputies" %}</a>
+  </li>
+</ul>
+
+<div class="row">
+
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-fed">{% trans "FedDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_fed %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-bru">{% trans "BruDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_bru %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-vla">{% trans "VlaDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_vla %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-wal">{% trans "WalDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_wal %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-fra">{% trans "FraDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_fra %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-ger">{% trans "GerDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_ger %}
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <h4 id="anchor-sen">{% trans "SenDeputies" %}</h4>
+    {% include 'parliament/components/deputies_list.html' with deputies=deputies_sen %}
+  </div>
+
+
+</div>
 
 {% endblock %}

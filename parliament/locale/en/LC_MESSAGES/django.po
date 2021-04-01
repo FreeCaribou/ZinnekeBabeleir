@@ -22,4 +22,25 @@ msgid "Propositions"
 msgstr "Propositions"
 
 msgid "Deputies"
-msgstr "Deputies"
+msgstr "Our deputies"
+
+msgid "FedDeputies"
+msgstr "Deputies federal"
+
+msgid "BruDeputies"
+msgstr "Deputies Brussels"
+
+msgid "VlaDeputies"
+msgstr "Deputies Flemish"
+
+msgid "WalDeputies"
+msgstr "Deputies Walloons"
+
+msgid "FraDeputies"
+msgstr "Deputies French-speaking"
+
+msgid "GerDeputies"
+msgstr "Deputies German-speaking"
+
+msgid "SenDeputies"
+msgstr "Senators"

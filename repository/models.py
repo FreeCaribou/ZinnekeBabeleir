@@ -23,6 +23,7 @@ class Legislature(models.Model):
     WALLONIA = 'WAL'
     FRANCOPHONE = 'FRA'
     GERMANOPHONE = 'GER'
+    SENAT = 'SEN'
     OTHER = 'other'
     PARLIAMENT_CHOICES = [
         (FEDERAL, 'federal'),
@@ -31,6 +32,7 @@ class Legislature(models.Model):
         (WALLONIA, 'wallonia'),
         (FRANCOPHONE, 'francophone'),
         (GERMANOPHONE, 'germanophone'),
+        (SENAT, 'senat'),
         (OTHER, 'other')
     ]
     parliament = models.CharField(
