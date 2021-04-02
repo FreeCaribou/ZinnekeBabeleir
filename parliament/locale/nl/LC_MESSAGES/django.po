@@ -3,6 +3,9 @@
 msgid "TheDeputies"
 msgstr "De volksvertegenwoordigers"
 
+msgid "TheActualDeputies"
+msgstr "De huidige volksvertegenwoordigers"
+
 msgid "VotesPropositions"
 msgstr "Voorstellen met stemmen"
 
@@ -44,3 +47,9 @@ msgstr "Volksvertegenwoordigers Duitstalig"
 
 msgid "SenDeputies"
 msgstr "Senatoren"
+
+msgid "DeputiesSearch"
+msgstr "Zoeken een volksvertegenwoordiger"
+
+msgid "NoDeputyFound"
+msgstr "Geen volksvertegenwoordiger gevonden"

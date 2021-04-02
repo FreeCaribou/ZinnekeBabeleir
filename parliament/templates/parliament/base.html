@@ -34,9 +34,18 @@
         </li>
         <li class="nav-item">
           <a href="{% url 'home:deputies_list_page' %}" class="nav-link">
-            {% trans "TheDeputies" %}</a>
+            {% trans "TheActualDeputies" %}</a>
         </li>
       </ul>
+
+      <form class="form-inline" action="{% url 'home:deputies_search_page' %}" method="get">
+        <div class="form-group">
+          <input id="searchForm" name="query" class="form-control" placeholder="{% trans 'DeputiesSearch' %}"
+            class="form-control" type="search">
+          <button class="btn" type="submit"><i class="fas fa-search color-secondary"></i></button>
+
+        </div>
+      </form>
 
     </div>
   </nav>

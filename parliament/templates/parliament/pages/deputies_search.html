@@ -1,0 +1,25 @@
+{% extends 'parliament/base.html' %}
+
+{% block content %}
+
+{% load i18n %}
+
+<div class="container">
+
+  <h1>{% trans "DeputiesSearch" %}</h1>
+
+  <div class="row">
+    <form class="col-md-6 col-md-offset-3 text-center" action="{% url 'home:deputies_search_page' %}" method="get">
+      <div class="form-group">
+        <input id="searchForm" name="query" class="form-control" value={{query}}>
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+    {% include 'parliament/components/deputies_list.html' %}
+  </div>
+
+</div>
+
+{% endblock %}

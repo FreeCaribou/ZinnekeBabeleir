@@ -24,6 +24,19 @@ def deputies_list(request):
     return render(request, 'parliament/pages/deputies.html', context)
 
 
+def deputies_search(request):
+    query = request.GET.get('query')
+    deputies = []
+    if query is not None:
+        deputies = Deputy.get_all_filter_name(query)
+
+    context = {
+        'deputies': deputies,
+        'query': query
+    }
+    return render(request, 'parliament/pages/deputies_search.html', context)
+
+
 def deputy_detail(request, pk):
     deputy = Deputy.get_one(pk)
     propositions = Proposition.get_all_for_deputy(pk)

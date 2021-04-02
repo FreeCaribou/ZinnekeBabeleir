@@ -1,5 +1,6 @@
+{% load i18n %}
 {% if deputies|length_is:"0" %}
-<p>No deputy</p>
+<p>{% trans "NoDeputyFound" %}</p>
 {% else %}
 <ul class="list-group list-group-flush">
   {% for d in deputies %}

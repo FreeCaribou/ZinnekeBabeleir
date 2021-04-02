@@ -3,7 +3,7 @@
 {% if propositions|length_is:"0" %}
 <p>No proposition</p>
 {% else %}
-<ul class="list-group list-group-flush">
+<ul class="list-group">
   {% for p in propositions %}
   <li class="list-group-item flex-space-between">
     <a href="{% url 'home:proposition_detail_page' pk=p.pk %}">

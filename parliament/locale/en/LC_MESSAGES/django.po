@@ -3,6 +3,9 @@
 msgid "TheDeputies"
 msgstr "The MPs"
 
+msgid "TheActualDeputies"
+msgstr "The current MPs"
+
 msgid "VotesPropositions"
 msgstr "Proposals with votes"
 
@@ -44,3 +47,9 @@ msgstr "Deputies German-speaking"
 
 msgid "SenDeputies"
 msgstr "Senators"
+
+msgid "DeputiesSearch"
+msgstr "Searching a deputy"
+
+msgid "NoDeputyFound"
+msgstr "No deputy found"

@@ -9,6 +9,9 @@ msgstr ""
 msgid "TheDeputies"
 msgstr "Les députés"
 
+msgid "TheActualDeputies"
+msgstr "Les députés actuels"
+
 msgid "VotesPropositions"
 msgstr "Les propositions avec votes"
 
@@ -50,3 +53,9 @@ msgstr "Deputés germanophone"
 
 msgid "SenDeputies"
 msgstr "Sénateurs"
+
+msgid "DeputiesSearch"
+msgstr "Recherche de députés"
+
+msgid "NoDeputyFound"
+msgstr "Aucun député trouvé"
