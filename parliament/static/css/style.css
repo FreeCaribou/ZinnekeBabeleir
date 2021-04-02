@@ -89,3 +89,7 @@ footer {
 .margin-bottom-medium {
   margin-bottom: var(--medium-pixel);
 }
+
+.margin-bottom-large {
+  margin-bottom: var(--large-pixel);
+}

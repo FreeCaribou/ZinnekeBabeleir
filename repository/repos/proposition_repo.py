@@ -12,6 +12,10 @@ def get_all():
     return p_list
 
 
+def get_all_last_by_parliament(parliament, limit=5):
+    return Proposition.objects.filter(legislature__parliament=parliament).order_by('-date')[0:limit]
+
+
 def get_one(pk):
     p = get_object_or_404(Proposition, pk=pk)
     p.votes = Vote.objects.filter(proposition=p)

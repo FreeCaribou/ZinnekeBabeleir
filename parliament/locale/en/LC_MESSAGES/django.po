@@ -53,3 +53,9 @@ msgstr "Searching a deputy"
 
 msgid "NoDeputyFound"
 msgstr "No deputy found"
+
+msgid "LastPropositions"
+msgstr "The last propositions"
+
+msgid "NoPropositionFound"
+msgstr "No proposition found"

@@ -53,3 +53,9 @@ msgstr "Zoeken een volksvertegenwoordiger"
 
 msgid "NoDeputyFound"
 msgstr "Geen volksvertegenwoordiger gevonden"
+
+msgid "LastPropositions"
+msgstr "De laast voorstellen"
+
+msgid "NoPropositionFound"
+msgstr "Geen voorstellen gevonden"

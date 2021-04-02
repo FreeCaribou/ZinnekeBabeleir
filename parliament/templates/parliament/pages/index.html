@@ -4,14 +4,43 @@
 
 {% load i18n %}
 
+<div class="row margin-bottom-large">
+  <div class="col-12 text-center margin-bottom-medium">
+    <h1>Vous êtes en Belgique? Et vous vous souciez des lois qui passent?</h1>
+    <h2>Mais surtout, de qui votent nos lois!?</h2>
+    <h3>Vous êtes au bon endroit!</h3>
+  </div>
+
+  <div class="col-12 margin-bottom-medium">
+    <p>Nous souhaitons via ce site montrer les votes ayant lieux dans les divers parlement de Belgique (le fédéral, le
+      bruxellois, la région flamande, wallone, la communauté Wallonie-Bruxelles (les francophones) et germanophone ainsi
+      que le Sénat (ça fait beaucoup!))</p>
+    <p>"La publicité de la politique est l'arme de sauvegarde des peuples" disait Jean-Sylvain Bailly. Il entendait par
+      là que tout ce qui concerne le sort du peuple doit être révélé.</p>
+    <p>Et c'est pour cela que nous trouvons important de rendre facilement accessible ce genre d'information.</p>
+    <p>C'est à dire pour quoi votent nos députés qui ne sont pas nos chefs, mais nos représentant.</p>
+    <p>Nous regrettons qu'aucun de nos parlement joue le jeu de présenter cela facilement.</p>
+    <p>Essyons donc de combler ce manque!</p>
+  </div>
+
+  <div class="col-12">
+    <p class="text-center">le site est encore en construction</p>
+    <p>Tant pour la partie technique (mais on y est presque)</p>
+    <p>Mais surtout pour la partie administrative! Je suis tout seul dessus et je ne sais pas gérer tous les parlements
+    </p>
+    <p>Je me concentrerais sur le parlement fédéral en priorité</p>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-12 col-md-6">
-    <h1>{% trans "Propositions" %}:</h1>
-    {% include 'parliament/components/propositions_list.html' %}
+    <h1>{% trans "LastPropositions" %}</h1>
+    <h2>{% trans "Federal" %}</h2>
+    {% include 'parliament/components/propositions_list.html' with propositions=propositions_fed %}
   </div>
-  <div class="col-12 col-md-6">
-    <h1>{% trans "Deputies" %}:</h1>
-    {% include 'parliament/components/deputies_list.html' with title=True %}
+  <div class="col-12">
+    <p class="text-center">Les votes du fédéral seront les seuls sur ce site le temps de trouver des bénévoles qui
+      complèteront les autres parlements</p>
   </div>
 </div>
 

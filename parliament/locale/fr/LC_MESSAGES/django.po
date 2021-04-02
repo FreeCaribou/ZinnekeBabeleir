@@ -59,3 +59,9 @@ msgstr "Recherche de députés"
 
 msgid "NoDeputyFound"
 msgstr "Aucun député trouvé"
+
+msgid "LastPropositions"
+msgstr "Les dernières propositions"
+
+msgid "NoPropositionFound"
+msgstr "Aucune proposition trouvée"

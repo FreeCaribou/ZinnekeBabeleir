@@ -67,8 +67,13 @@ def init_db():
 
     cursor.execute(
         "INSERT INTO {} (title_fr, title_nl, date, legislature_id)".format(repo_proposition) +
-        "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-09', 2)" +
-        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 1)"
+        "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-28', 2)" +
+        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 1)" +
+        ", ('Un test', 'Een test', '2021-02-16', 2)" +
+        ", ('2 test', '2 test', '2021-02-16', 2)" +
+        ", ('3 test', '3 test', '2021-02-16', 2)" +
+        ", ('4 test', '4 test', '2021-02-16', 2)" +
+        ", ('5 test', '5 test', '2021-02-16', 2)"
     )
 
     cursor.execute(
