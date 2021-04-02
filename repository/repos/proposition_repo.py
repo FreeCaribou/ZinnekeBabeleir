@@ -1,5 +1,6 @@
 from ..models import Proposition, Vote
 from django.shortcuts import get_object_or_404
+from repository.repos.legislature_repo import get_one_last_by_parliament
 
 # TBD for | against | abstention | absent
 
@@ -14,6 +15,11 @@ def get_all():
 
 def get_all_last_by_parliament(parliament, limit=5):
     return Proposition.objects.filter(legislature__parliament=parliament).order_by('-date')[0:limit]
+
+
+def get_all_by_last_legislature_parliament(parliament):
+    legislature = get_one_last_by_parliament(parliament)
+    return Proposition.objects.all().filter(legislature=legislature).order_by('-date')
 
 
 def get_one(pk):

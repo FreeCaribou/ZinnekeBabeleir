@@ -12,6 +12,8 @@ urlpatterns = [
          name='deputy_detail_page'),
     path('propositions/', Proposition.propositions_list,
          name='propositions_list_page'),
+    path('propositions/federal', Proposition.federal,
+         name='propositions_federal'),
     path('propositions/<int:pk>/', Proposition.proposition_detail,
          name='proposition_detail_page'),
 ]

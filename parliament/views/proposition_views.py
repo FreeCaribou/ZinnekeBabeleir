@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from repository.repos import Deputy
 from repository.repos import Proposition
+from repository.repos import Legislature
 
 
 def propositions_list(request):
@@ -28,3 +29,15 @@ def proposition_detail(request, pk):
         'deputies_absent': deputies_absent
     }
     return render(request, 'parliament/pages/proposition.html', context)
+
+
+def federal(request):
+    propositions = Proposition.get_all_by_last_legislature_parliament('FED')
+    deputies = Deputy.get_all_by_last_legislature_parliament('FED')
+    legislature = Legislature.get_one_last_by_parliament('FED')
+    context = {
+        'propositions': propositions,
+        'deputies': deputies,
+        'legislature': legislature
+    }
+    return render(request, 'parliament/pages/federal.html', context)

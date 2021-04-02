@@ -65,3 +65,6 @@ msgstr "Les dernières propositions"
 
 msgid "NoPropositionFound"
 msgstr "Aucune proposition trouvée"
+
+msgid "Parliaments"
+msgstr "Les parlements"

@@ -1,0 +1,21 @@
+{% extends 'parliament/base.html' %}
+
+{% block content %}
+
+{% load i18n %}
+<h1>{% trans "Federal" %}</h1>
+<h3>{{legislature}}</h3>
+
+<div class="row">
+  <div class="col-12 col-md-6">
+    <h2>{% trans "Propositions" %}</h2>
+    {% include 'parliament/components/propositions_list.html' %}
+  </div>
+  <div class="col-12 col-md-6">
+    <h2>{% trans "TheDeputies" %}</h2>
+    {% include 'parliament/components/deputies_list.html' %}
+  </div>
+</div>
+
+
+{% endblock %}

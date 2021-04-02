@@ -62,6 +62,10 @@ nav {
   color: var(--color-secondary) !important;
 }
 
+.navbar .dropdown-menu {
+  background-color: var(--color-primary);
+}
+
 button.navbar-toggler {
   border-color: var(--color-secondary) !important;
 }

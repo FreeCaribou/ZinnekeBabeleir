@@ -59,3 +59,6 @@ msgstr "De laast voorstellen"
 
 msgid "NoPropositionFound"
 msgstr "Geen voorstellen gevonden"
+
+msgid "Parliaments"
+msgstr "De parlements"
