@@ -65,15 +65,17 @@ def init_db():
         ",('3','5')"
     )
 
+    # <p align="center">Les frites c'est bien</p><p><br></p><p>Alors mettons en plus</p><p>Bisous</p><p><iframe data-youtube-id="IIaTdUkhEUE" src="https://www.youtube-nocookie.com/embed/IIaTdUkhEUE?wmode=opaque&amp;start=0" allowfullscreen="" width="560" height="315" frameborder="0"></iframe><br></p>
+
     cursor.execute(
-        "INSERT INTO {} (title_fr, title_nl, date, legislature_id)".format(repo_proposition) +
-        "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-28', 2)" +
-        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 1)" +
-        ", ('Un test', 'Een test', '2021-02-16', 2)" +
-        ", ('2 test', '2 test', '2021-02-16', 2)" +
-        ", ('3 test', '3 test', '2021-02-16', 2)" +
-        ", ('4 test', '4 test', '2021-02-16', 2)" +
-        ", ('5 test', '5 test', '2021-02-16', 2)"
+        "INSERT INTO {} (title_fr, title_nl, date, legislature_id, detail)".format(repo_proposition) +
+        "VALUES('Plus de frite à la cantine', 'Meer frietje', '2021-02-28', 2, '<p align=\"center\">Les frites c\\'est bien</p><p><br></p><p>Alors mettons en plus</p><p>Bisous</p><p><iframe data-youtube-id=\"IIaTdUkhEUE\" src=\"https://www.youtube-nocookie.com/embed/IIaTdUkhEUE?wmode=opaque&amp;start=0\" allowfullscreen=\"\" width=\"560\" height=\"315\" frameborder=\"0\"></iframe><br></p>')" +
+        ", ('Mettre la chanson chef un petit verre on a soif du Lange Jojo comme hymne bruxellois', 'Een tof lied', '2021-02-16', 1, NULL)" +
+        ", ('Un test', 'Een test', '2021-02-16', 2, NULL)" +
+        ", ('2 test', '2 test', '2021-02-16', 2, NULL)" +
+        ", ('3 test', '3 test', '2021-02-16', 2, NULL)" +
+        ", ('4 test', '4 test', '2021-02-16', 2, NULL)" +
+        ", ('5 test', '5 test', '2021-02-16', 2, NULL)"
     )
 
     cursor.execute(

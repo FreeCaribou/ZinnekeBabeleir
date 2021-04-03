@@ -12,6 +12,11 @@
   <div class="row">
     <h2>{{proposition.date | date:"Y/m/d"}} {{proposition.legislature.parliament}} </h2>
   </div>
+  <div>
+    {% if proposition.detail %}
+    {{proposition.detail | safe }}
+    {% endif %}
+  </div>
   <!-- <div class="row">
     TODO need to know, a law pass if majority of all deputies of all deputies present / see the summary of the count
     vote?

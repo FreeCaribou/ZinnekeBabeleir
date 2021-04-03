@@ -14,20 +14,6 @@ document.getElementById("launch-fillin-vote").addEventListener("click", (e) => {
   });
 });
 
-document.getElementById("build-fillin-vote").addEventListener("click", (e) => {
-  const data = {
-    for: document.getElementById('for').value.split(', '),
-    against: document.getElementById('against').value.split(', '),
-    abstention: document.getElementById('abstention').value.split(', '),
-    absent: document.getElementById('absent').value.split(', ')
-  }
-
-  var gettingActiveTab = browser.tabs.query({ active: true, currentWindow: true });
-  gettingActiveTab.then((tabs) => {
-    browser.tabs.sendMessage(tabs[0].id, { data: data });
-  });
-});
-
 document.getElementById("build-meli-melo-fillin-vote").addEventListener("click", (e) => {
   const yesRegex = /Ja(\d{1,3})Oui/gm;
   const noRegex = /Neen(\d{1,3})Non/gm;
@@ -50,3 +36,17 @@ document.getElementById("build-meli-melo-fillin-vote").addEventListener("click",
     browser.tabs.sendMessage(tabs[0].id, { data: data });
   });
 });
+
+// document.getElementById("build-fillin-vote").addEventListener("click", (e) => {
+//   const data = {
+//     for: document.getElementById('for').value.split(', '),
+//     against: document.getElementById('against').value.split(', '),
+//     abstention: document.getElementById('abstention').value.split(', '),
+//     absent: document.getElementById('absent').value.split(', ')
+//   }
+
+//   var gettingActiveTab = browser.tabs.query({ active: true, currentWindow: true });
+//   gettingActiveTab.then((tabs) => {
+//     browser.tabs.sendMessage(tabs[0].id, { data: data });
+//   });
+// });
