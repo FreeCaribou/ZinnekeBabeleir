@@ -1,14 +1,25 @@
 import os
 from django.db import models
+from django.utils.html import mark_safe
 
 # Maybe TODO / To See
 
 
 class Party(models.Model):
     name = models.CharField(max_length=100)
+    logo = models.BinaryField(editable=True, null=True)
 
     def __str__(self):
         return self.name
+
+    def logo_tag(self):
+        from base64 import b64encode
+        return mark_safe('<img src = "data: image; base64, {}" height="100">'.format(
+            b64encode(self.logo).decode('utf8')
+        ))
+
+    logo.short_description = 'Image'
+    logo.allow_tags = True
 
     class Meta:
         verbose_name_plural = "Parties"
@@ -104,6 +115,6 @@ class Vote(models.Model):
 
 # TODO bug with launch, it's call always twice
 # For no production mode, rebuild the db to always have a 'clean' db
-if os.environ.get('ENV') != 'PRODUCTION':
-    from .repos.init_repo import init_db
-    init_db()
+# if os.environ.get('ENV') != 'PRODUCTION':
+#     from .repos.init_repo import init_db
+#     init_db()

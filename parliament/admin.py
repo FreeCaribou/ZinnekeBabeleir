@@ -77,8 +77,26 @@ class PropositionInline(admin.TabularInline):
     extra = 1
 
 
+class PartyLogoSourceForm(forms.ModelForm):
+
+    logo = forms.FileField(required=False)
+
+    def save(self, commit=True):
+        if self.cleaned_data.get('logo') is not None \
+                and hasattr(self.cleaned_data['logo'], 'file'):
+            data = self.cleaned_data['logo'].file.read()
+            self.instance.logo = data
+        return self.instance
+
+    def save_m2m(self):
+        # FIXME: this function is required by ModelAdmin, otherwise save process will fail
+        pass
+
+
 @admin.register(Party)
 class PartyAdmin(admin.ModelAdmin):
+    form = PartyLogoSourceForm
+    list_display = ['name', 'logo_tag']
     inlines = [DeputyInLine]
 
 

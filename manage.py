@@ -5,7 +5,8 @@ import sys
 
 
 def main():
-    print('hello world ' + os.environ.get('USER', 'no user'))
+    print('hello world ' + os.environ.get('USER', 'no user') +
+          os.environ.get('ENV', ' no env'))
     os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                           'zinneke_babeleir_project.settings')
     try:
